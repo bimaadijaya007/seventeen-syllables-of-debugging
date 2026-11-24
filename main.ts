@@ -1,4 +1,4 @@
-import { mkdirSync, writeFileSync } from "node:fs";
+import { chmodSync, mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
 const HAIKU = [
@@ -22,13 +22,19 @@ function selfCheck(lines) {
       throw new Error("trailing whitespace in haiku");
     }
   }
+  const total = lines.join("\n").length + 1;
+  if (total < 1 || total > 200) {
+    throw new Error(`total entry length out of range (1-200): ${total}`);
+  }
 }
 
 selfCheck(HAIKU);
 
 const outDir = process.env.MAKEFUN_OUTPUT_DIR || "/output";
 mkdirSync(outDir, { recursive: true });
-writeFileSync(join(outDir, "entry.txt"), HAIKU.join("\n") + "\n", {
+const entryPath = join(outDir, "entry.txt");
+writeFileSync(entryPath, HAIKU.join("\n") + "\n", {
   encoding: "utf8",
   mode: 0o644,
 });
+chmodSync(entryPath, 0o644);
