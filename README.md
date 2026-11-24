@@ -1,5 +1,9 @@
 # Seventeen Syllables of Debugging
 
+[![make.fun](https://make.fun/badge/u-irvan-motion-seventeen-syllables-of-debugging-d194b605.svg)](https://make.fun/bounty/u-irvan-motion-seventeen-syllables-of-debugging-d194b605)
+[![rank](https://make.fun/badge/u-irvan-motion-seventeen-syllables-of-debugging-d194b605/bimaadijaya007/seventeen-syllables-of-debugging/rank.svg)](https://make.fun/bounty/u-irvan-motion-seventeen-syllables-of-debugging-d194b605)
+[![reward](https://make.fun/badge/u-irvan-motion-seventeen-syllables-of-debugging-d194b605/bimaadijaya007/seventeen-syllables-of-debugging/reward.svg)](https://make.fun/bounty/u-irvan-motion-seventeen-syllables-of-debugging-d194b605)
+
 A tiny deterministic Node program that writes one fixed three-line haiku about debugging to `/output/entry.txt`.
 
 ```
